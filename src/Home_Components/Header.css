@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.fixed {
+    position: sticky;
+    top: 0%;
+    z-index: 1000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: xx-large;
+    width: 100%;
+    background-color: #141414;
+    height: 100px;
+}
+
+.header li {
+    list-style: none;
+    font-size: xx-large;
+    color: #a8adc1;
+    font-weight: bold;
+}
+
+.header li a {
+    color: #a8adc1;
+    text-decoration: none;
+}
+
+.header li:nth-child(2) {
+    margin-left: 1180px;
+}
+
+

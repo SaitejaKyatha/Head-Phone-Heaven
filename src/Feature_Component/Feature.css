@@ -1,0 +1,52 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #141414; */
+  }
+    
+  .featured_title {
+    font-size: 20px;
+    color: #a8adc1;
+  }
+   
+  
+   .fimage{
+    width: 300px;
+    height: 500px;
+    object-fit: contain;
+   }
+ 
+  
+  .products_price {
+    font-size: 30px;
+    color: #a8adc1;
+    font-weight: bolder;
+    /* margin-top: 10px; */
+  }
+  
+  .products_price small {
+    font-size: 16px;
+    color: #a8adc1;
+    text-decoration: line-through;
+  }
+  
+  /* Pagination styles */
+  .swiper-pagination-bullet {
+    background-color: rgb(0, 0, 0) !important;
+    opacity: 15;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: red !important;
+    opacity: 5;
+  }
+
+  .blackheading{
+    background-color: #141414;
+    padding: 60px;
+    font-size: x-large;
+    color: #a8adc1;;
+    text-align: center;
+  }

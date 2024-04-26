@@ -1,0 +1,32 @@
+.blackheading{
+    background-color: #141414;
+    padding: 60px;
+    font-size: x-large;
+    color: #a8adc1;;
+    text-align: center;
+  }
+
+.tplists{
+    background-color: #141414;
+    height: 150px;
+    padding-top: 50px;
+} 
+
+.tplists ul{
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+.tplists ul li{
+    font-size: 30px;
+    list-style: none;
+    color: #a8adc1;
+    cursor: pointer;
+    padding: 10px;
+ 
+}
+
+.tplists ul li:hover, .tplists ul li:active{
+    background-color: red;
+}
