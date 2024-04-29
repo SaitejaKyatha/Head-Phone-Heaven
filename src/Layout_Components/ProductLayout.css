@@ -1,0 +1,27 @@
+/* .cards-page{
+    background-color: #141414;
+    border: 1px solid #a8adc1;;
+    display: grid;
+    grid-template-columns: repeat(5, 0fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    width: 500px; 
+} */
+
+.layoutcards{
+   
+   border: 1px solid red;
+   width: 400px;
+   height: auto;
+   padding: 20px;
+}
+
+.product-details{
+
+}
+
+.line{
+    
+    border: 1px solid #a8adc1 ;
+}
+

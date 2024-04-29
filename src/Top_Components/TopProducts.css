@@ -29,4 +29,16 @@
 
 .tplists ul li:hover, .tplists ul li:active{
     background-color: red;
+    border-radius: 5px;
+}
+
+.interface{
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: #141414;
+    justify-content: center;
 }

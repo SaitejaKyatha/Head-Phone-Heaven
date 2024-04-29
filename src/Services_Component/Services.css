@@ -1,0 +1,48 @@
+
+.service-size{
+    height: 400px;
+    padding: 20px;
+    background-color: #141414;
+}
+
+.serviceheading{
+    background-color: #141414;
+    padding: 60px;
+    font-size: 45px;
+    color: #a8adc1;;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.service-icon{
+    
+    color: red;
+    font-size: 55px;
+}
+
+.servicematter{
+    display: flex;
+    gap: 15px;
+    height: 0px;
+    align-items: center;
+}
+
+.servicemattericon{
+    display: flex;
+    justify-content: space-around;
+    background-color: #141414;
+    padding: 200px;
+
+}
+
+
+.service-icon-heading{
+    font-size: 30px;
+    color: #a8adc1;
+}
+
+.service-icon-para{
+    font-size: 24px;
+    color: #a8adc1;
+}
+
