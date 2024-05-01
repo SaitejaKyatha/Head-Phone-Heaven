@@ -5,9 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/swiper-bundle.css';
 import './Main.css'
-import sonyXb910n from '../Assets/Images/Products/sonyXb910n-1.png'
-import jblLive660NC from '../Assets/Images/Products/jbl660nc-1.png'
-import boat1313 from '../Assets/Images/Products/boat131-3.png'
+
 
 
 function Main() {
@@ -17,7 +15,7 @@ function Main() {
             id: 1,
             bgtext: "Over Ear",
             pdname: "JBL Live 660NC",
-            image: jblLive660NC,
+            image: "/products/jbl660nc-1.png",
             tagline: "Keep The Noise Out, Or In. You Choose.",
             descprice: 9999,
             originalPrice: 14999,
@@ -26,7 +24,7 @@ function Main() {
             id: 2,
             bgtext: "In Ear",
             pdname: "boAt Airdopes 131",
-            image: boat1313,
+            image: "/products/boat131-3.png",
             tagline: "Featherweight For Comfort All-Day.",
             descprice: 1099,
             originalPrice: 2990,
@@ -35,7 +33,7 @@ function Main() {
             id: 3,
             bgtext: "Over Ear",
             pdname: "Sony WH-XB910N",
-            image: sonyXb910n,
+            image: "/products/sonyXb910n-1.png",
             tagline: "Give Your Favourite Music A Boost.",
             descprice: 13489,
             originalPrice: 19990,

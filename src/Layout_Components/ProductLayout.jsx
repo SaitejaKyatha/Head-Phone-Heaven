@@ -1,39 +1,34 @@
 import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faStar } from "@fortawesome/free-solid-svg-icons"
 import './ProductLayout.css'
+import { IoMdStar } from 'react-icons/io';
+import productsData from '../Data_Components/ProductsData'
 
-function ProductLayout(item) {
+function ProductLayout(props) {
 
-  const { id, images, title, info, finalPrice, originalPrice, rateCount, path } = item;
+  const { images, title, info, finalPrice, originalPrice, rateCount } = props;
 
   return (
     <>
       <div className='layoutcards'>
-
-
-        <img src={images[0]} alt="imagesss" className='product-image' />
-
+        <div className='imageback'>
+          <img src={images[0]} alt="imagesss" className='product-image' />
+        </div>
         <div className='product-details'>
           <span className='stars'>
-            <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B", }} />
-            <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B", }} />
-            <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B", }} />
-            <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B", }} />
-            <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B", }} />
+            {
+              [...Array(rateCount)].map((i) => <IoMdStar key={i} style={{color:"red"}} />)
+            }
           </span>
-          <h3 className='product-titlr'>{title}</h3>
-          <h5 className='product-desc'>{info}</h5>
+          <h3 className='product-title'>{title}</h3>
+          <p className='product-desc'>{info}</p>
           <div className='line'></div>
-          <h2 className='product-price'>
-            {finalPrice} <strike>{originalPrice}</strike>
-          </h2>
-          <button type='submit '></button>
-
+          <h1 className='product-price'>
+            ₹{finalPrice} <strike> ₹{originalPrice}</strike>
+          </h1>
+          <button type='submit' className='productbtn'>Add to cart</button>
         </div>
 
       </div>
-
     </>
   )
 }

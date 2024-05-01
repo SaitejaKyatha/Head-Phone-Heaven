@@ -1,0 +1,83 @@
+.productsdivider {
+    display: flex;
+    padding: 130px 20px 20px 20px;
+    background-color: #141414;
+    /* height: 1000px; */
+    gap: 20px;
+
+}
+
+/* .scroller::-webkit-scrollbar-track {
+    background-color: #161819;
+  } */
+
+.scroller {
+    width: 280px;
+    /* border: 1px solid red; */
+    height: 680px;
+    overflow-y: auto;
+    background-color: #161819;
+    scrollbar-color: rgba(255, 255, 255, 0.2) #161819;
+    padding: 20px 20px 20px 25px;
+    color: #a8adc1;
+    text-align: start;
+}
+
+
+.scroller li {
+    list-style: none;
+    padding: 3px;
+    font-size: 22px;
+}
+
+.scroller h2 {
+    margin: 20px 0px 0px 0px;
+}
+
+
+.scroller h3 {
+    margin: 30px 0px 0px 0px;
+}
+
+
+.whiteline {
+    background-color: #a8adc1;
+    /* background-color: #C70039; */
+    height: 1px;
+    margin: 20px 0px 20px 0px;
+}
+
+
+.scroller input[type="checkbox"] {
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    font-size: xx-large;
+    accent-color: red;
+}
+
+.display {
+    margin-top: 10px;
+}
+
+.scroller label {
+    font-size: larger;
+    margin: 0px 0px 60px 20px;
+
+}
+
+.scrollp {
+    font-size: 20px;
+    padding: 20px 0px 10px 0px;
+}
+
+.productsinfo {
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    gap: 10px;
+    /* width: 100%; */
+    height: auto;
+    padding: 10px;
+    background-color: #141414;
+    justify-content: center;
+}

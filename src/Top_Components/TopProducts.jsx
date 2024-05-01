@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import './TopProducts.css'
 import productsData from '../Data_Components/ProductsData'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import ProductLayout from '../Layout_Components/ProductLayout'
+import { Link } from 'react-router-dom'
 
 
 function TopProducts() {
@@ -47,9 +50,13 @@ function TopProducts() {
       </nav>
 
       <div className='interface'>
-          {(filteredProducts.length > 0 ? filteredProducts : products).slice(0, 11).map(item => (
+        {(filteredProducts.length > 0 ? filteredProducts : products).slice(0, 11).map(item => (
           <ProductLayout key={item.id} {...item} />
         ))}
+
+        <div className='browsealllayoutcard'>
+          <Link to="/all-products"><p>Browse All Products <span><FontAwesomeIcon icon={faArrowRight} /></span></p></Link>
+        </div>
       </div>
     </>
   )

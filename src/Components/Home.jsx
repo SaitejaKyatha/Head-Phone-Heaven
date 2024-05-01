@@ -14,11 +14,13 @@ function Home() {
   return (
     <>
     <Header/>
+
     <Main />
     <Feature />
     <TopProducts/>
     <Services/>
     <Footer/>
+   
     </>
   )
 }

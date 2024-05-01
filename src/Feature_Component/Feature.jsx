@@ -108,55 +108,51 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/swiper-bundle.css';
 import './Feature.css'
-import boat255r from '../Assets/Images/Products/boat255r-1.png'
-import jblendu from '../Assets/Images/Products/jbl-endu-1.png'
-import boat203 from '../Assets/Images/Products/boat203-1.png'
-import boat518 from '../Assets/Images/Products/boat518-1.png'
-import jbl760nc from '../Assets/Images/Products/jbl760nc-1.png'
+
 
 function Feature() {
   const productsData = [
     {
       id: 1,
       name: 'boAt Rockerz 255',
-      image: boat255r,
+      image: "/products/boat255r-1.png",
       price: 899,
       originalPrice: 2990,
     },
     {
       id: 2,
       name: 'JBL Endurance Run Sports',
-      image: jblendu,
+      image: "/products/jbl-endu-1.png",
       price: 999,
       originalPrice: 1599,
     },
     {
       id: 3,
       name: 'boAt Airdopes 203',
-      image: boat203,
+      image: "/products/boat203-1.png",
       price: 1074,
       originalPrice: 3999,
     },
     {
       id: 4,
       name: 'boAt Rockerz 518',
-      image: boat518,
+      image: "/products/boat518-1.png",
       price: 1299,
       originalPrice: 3990,
     },
     {
       id: 5,
       name: 'JBL Tune 760NC',
-      image: jbl760nc,
+      image: "/products/jbl760nc-1.png",
       price: 5999,
       originalPrice: 7999,
     },
     {
-        id: 5,
-        name: 'JBL Tune 760NC',
-        image: jbl760nc,
-        price: 5999,
-        originalPrice: 7999,
+        id: 6,
+        name: 'Sony WI-XB400',
+        image: "/products/sonyXb400-1.png",
+        price: 2690,
+        originalPrice: 4990,
       },
   ]
 

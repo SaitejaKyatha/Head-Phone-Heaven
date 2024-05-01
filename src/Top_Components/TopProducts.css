@@ -14,7 +14,8 @@
 
 .tplists ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 80px;
    
 }
 
@@ -26,7 +27,6 @@
     padding: 10px;
  
 }
-
 .tplists ul li:hover, .tplists ul li:active{
     background-color: red;
     border-radius: 5px;
@@ -42,3 +42,71 @@
     background-color: #141414;
     justify-content: center;
 }
+
+
+/* .layoutcards{
+   
+    border: 1px solid #a8adc1;
+    width: 400px;   
+}
+
+ .product-details{
+    padding: 20px;
+ }
+ 
+ .product-image{
+     height: 400px;
+     width: 100%;
+     padding: 20px;
+ }
+ 
+ .line{
+     
+     border: 1px solid #a8adc1 ;
+ }
+
+ .imageback{
+    background-color: #161819;
+    display: flex;
+    justify-content: center;
+
+ }
+
+ .product-title{
+    color: #a8adc1;
+    padding: 20px 0px 20px 0px;
+    font-size: xx-large;
+ }
+
+ .product-desc{
+    color: #a8adc1;
+    font-size: 25px;
+    padding: 0px 0px 20px 0px;
+ }
+
+ .product-price{
+    color: #a8adc1;
+    font-size: 30px;
+    padding: 0px 0px 20px 0px;
+ }
+
+
+ 
+  */
+
+
+  .browsealllayoutcard{
+    border: 1px solid #a8adc1;
+    width: 380px;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    padding: 40px;
+   
+  }
+
+  .browsealllayoutcard a{
+    text-align: center;
+    color: #a8adc1;
+    text-decoration: none;
+  }
