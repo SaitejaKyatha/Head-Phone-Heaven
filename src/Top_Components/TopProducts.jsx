@@ -11,14 +11,17 @@ function TopProducts() {
 
   const [products, setproducts] = useState(productsData)
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [activeCategory, setActiveCategory] = useState('All')
 
   const allProducts = () => {
     setFilteredProducts([]);
+    setActiveCategory('All');
   };
 
   const filterByCategory = (category) => {
     const filtered = productsData.filter(product => product.category === category);
     setFilteredProducts(filtered);
+    setActiveCategory(category);
   };
 
   return (
@@ -27,23 +30,23 @@ function TopProducts() {
 
       <nav className='tplists'>
         <ul >
-          <li onClick={allProducts}>
+          <li onClick={allProducts} className={activeCategory === 'All' ? 'active' : ''}>
             All
           </li>
 
-          <li onClick={() => filterByCategory('Headphones')}>
+          <li onClick={() => filterByCategory('Headphones')} className={activeCategory === 'Headphones' ? 'active' : ''}>
             Headphones
           </li>
 
-          <li onClick={() => filterByCategory('Earbuds')}>
+          <li onClick={() => filterByCategory('Earbuds')} className={activeCategory === 'Earbuds' ? 'active' : ''}>
             Earbuds
           </li>
 
-          <li onClick={() => filterByCategory('Earphones')}>
+          <li onClick={() => filterByCategory('Earphones')} className={activeCategory === 'Earphones' ? 'active' : ''}>
             Earphones
           </li>
 
-          <li onClick={() => filterByCategory('Neckbands')}>
+          <li onClick={() => filterByCategory('Neckbands')} className={activeCategory === 'Neckbands' ? 'active' : ''}>
             Neckbands
           </li>
         </ul>

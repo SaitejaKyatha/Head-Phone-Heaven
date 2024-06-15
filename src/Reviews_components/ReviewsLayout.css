@@ -1,0 +1,34 @@
+
+
+.logonamestar{
+    display: flex;
+    gap: 30px;
+}
+
+.logoimage{
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+}
+
+.reviews{
+    padding-top: 50px;
+    padding-left: 30px;
+    color: #a8adc1;
+    background-color: #141414;
+}
+
+
+
+.rating_star{
+    color: red;
+    font-size: 20px;
+}
+
+.bar, .date{
+    font-size: 25px;
+}
+
+.parareview{
+    font-size: 25px;
+}

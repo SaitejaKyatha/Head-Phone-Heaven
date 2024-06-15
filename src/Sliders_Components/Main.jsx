@@ -1,48 +1,62 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/swiper-bundle.css';
 import './Main.css'
+import Header from '../Home_Components/Header';
+import productsData from '../Data_Components/ProductsData';
 
 
 
 function Main() {
 
-    const productsData = [
-        {
-            id: 1,
-            bgtext: "Over Ear",
-            pdname: "JBL Live 660NC",
-            image: "/products/jbl660nc-1.png",
-            tagline: "Keep The Noise Out, Or In. You Choose.",
-            descprice: 9999,
-            originalPrice: 14999,
-        },
-        {
-            id: 2,
-            bgtext: "In Ear",
-            pdname: "boAt Airdopes 131",
-            image: "/products/boat131-3.png",
-            tagline: "Featherweight For Comfort All-Day.",
-            descprice: 1099,
-            originalPrice: 2990,
-        },
-        {
-            id: 3,
-            bgtext: "Over Ear",
-            pdname: "Sony WH-XB910N",
-            image: "/products/sonyXb910n-1.png",
-            tagline: "Give Your Favourite Music A Boost.",
-            descprice: 13489,
-            originalPrice: 19990,
+    const [showsearchinput, setshowsearchinput] = useState(false);
+    const inputref = useRef(null);
+    const [searchquery, setsearchquery] = useState('')
+
+    const searchbar = () => {
+        setshowsearchinput(!showsearchinput)
+
+    }
+
+    const clickinhide = (event) => {
+        if (inputref.current && !inputref.current.contains(event.target)) {
+            setshowsearchinput(false)
         }
-    ]
+    }
+
+    useEffect(() => {
+        document.addEventListener('mousedown', clickinhide);
+        return () => {
+            document.removeEventListener('mousedown', clickinhide)
+        }
+
+    }, [])
+
+    const handleserachchange = (event) => {
+        if (event.target && event.taret.value !== undefined) {
+            setsearchquery(event.taret.value);
+        }
+    }
+
+    const filteredproducts = productsData.filter((product) =>
+        product.title.toLowerCase().includes(searchquery.toLowerCase())
+    );
 
     return (
         <>
+
+            <Header searchbar={searchbar} />
+            {/* {showsearchinput && (
+                <div className='inputbox' ref={inputref}>
+                    <input type="text" placeholder='Search for product' className='inputbar' value={searchquery} onChange={handleserachchange} />
+                </div>
+            )} */}
+
             <Swiper
+
                 modules={[Pagination, Autoplay]}
                 spaceBetween={50}
                 slidesPerView={1}
@@ -52,16 +66,17 @@ function Main() {
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
             >
-                {productsData.map((item) => (
+
+                {filteredproducts.filter((item) => item.tag === 'hero-product').map((item) => (
                     <SwiperSlide key={item.id} className="featured_slides">
-                        <h1 className='bgtext'>{item.bgtext}</h1>
-                        <h1 className='pdname'>{item.pdname}</h1>
+                        <h1 className='bgtext'>{item.type}</h1>
+                        <h1 className='pdname'>{item.title}</h1>
                         <h1 className='tagline'>{item.tagline}</h1>
-                      <div className='price'>  <span >₹{item.descprice}</span>  <strike> ₹{item.originalPrice}</strike></div>
+                        <div className='price'>  <span >₹{item.finalPrice}</span>  <strike> ₹{item.originalPrice}</strike></div>
                         <button className='btn'>Shop Now</button>
-                        <img src={item.image} alt="bomma" className="featured_img" />
-                   
-                       
+                        <img src={item.heroImage} alt="bomma" className="featured_img" />
+
+
                     </SwiperSlide>
                 ))}
             </Swiper>

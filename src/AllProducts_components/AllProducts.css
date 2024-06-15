@@ -7,13 +7,8 @@
 
 }
 
-/* .scroller::-webkit-scrollbar-track {
-    background-color: #161819;
-  } */
-
 .scroller {
     width: 280px;
-    /* border: 1px solid red; */
     height: 680px;
     overflow-y: auto;
     background-color: #161819;
@@ -23,11 +18,24 @@
     text-align: start;
 }
 
+.active {
+    color: red;
+    background-color: #161819;
+  }
+
 
 .scroller li {
     list-style: none;
     padding: 3px;
     font-size: 22px;
+}
+
+.scroller li:hover{
+    color: red;
+    cursor: pointer;
+}
+.scroller li:active{
+    color: red;
 }
 
 .scroller h2 {
@@ -80,4 +88,16 @@
     padding: 10px;
     background-color: #141414;
     justify-content: center;
+}
+
+
+.clear-filter-button{
+    padding: 15px;
+    border-radius: 4px;
+    color: #a8adc1;
+    background-color: red;
+    border: 0px ;
+    font-size: x-large;
+    width: 100%;
+    cursor:pointer;
 }

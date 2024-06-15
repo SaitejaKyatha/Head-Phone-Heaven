@@ -4,6 +4,7 @@
    
     border: 1px solid #a8adc1;
     width: 380px;   
+    height: 580px;
 }
 
  .product-details{
@@ -12,24 +13,22 @@
  
  .product-image{
      height: 280px;
-     width: 80%;
-     padding: 15px;  
-     
+     width: 85%;   
  }
  
  .product-image:hover{
    width: 86%;
    height: 281px;  
  }
- .line{
-     
+ .line{ 
      border: 1px solid #a8adc1 ;
  }
 
  .imageback{
     background-color: #161819;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 15px;  
     
  }
 

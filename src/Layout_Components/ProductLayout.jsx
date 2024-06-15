@@ -1,17 +1,18 @@
 import React from 'react'
 import './ProductLayout.css'
 import { IoMdStar } from 'react-icons/io';
-import productsData from '../Data_Components/ProductsData'
+import { Link } from 'react-router-dom'
 
 function ProductLayout(props) {
 
-  const { images, title, info, finalPrice, originalPrice, rateCount } = props;
+  const { images, title, info, finalPrice, originalPrice, rateCount, id, path } = props;
 
   return (
     <>
       <div className='layoutcards'>
         <div className='imageback'>
-          <img src={images[0]} alt="imagesss" className='product-image' />
+         <Link to={`${path}${id}`}>
+         <img src={images[0]} alt="imagesss" className='product-image' /></Link>
         </div>
         <div className='product-details'>
           <span className='stars'>
